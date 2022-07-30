@@ -1,0 +1,204 @@
+.header{
+    height: 120px;
+    background-image: linear-gradient(0,#fe6433, #f53e2d);
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar__list{
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;
+    margin-top: 4Px;
+}
+.list__item{
+    margin: 0 9px;
+    position: relative;
+    min-height: 2.6rem;
+ 
+}
+.list__item--no-Hover{
+    color: var(--white-color);
+    cursor: text;
+}
+.list__item:hover,
+.list__item-link:hover,
+.list__item-icon--link:hover{
+    color: rgba(225,225,225,0.7);
+    cursor: pointer;
+}
+.list__item:nth-child(3),
+.list__item:nth-child(4){
+    font-weight: 450;
+}
+.list__item,
+.list__item-link{
+ font-size: 1.5rem;
+ color: var(--white-color);
+ text-decoration: none;
+ font-weight: 300;
+}
+.list__item,
+.list__item-link,
+.list__item-icon--link{
+    display: flex;
+    align-items: center;
+}
+/* Tạo dấu gạch phân cách */
+.list__item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1.6rem;
+    /*-- Cách 1: --*/
+    border: 0.1rem solid var(--white-color);
+    opacity: 0.4;
+    top: 0;
+    /* Margin trái (vào cửa hàng, Đăng ký) & phải(Kết nối, đăng nhập)  : 0.8rem(trái) +0.8rem (phải)= 1.6rem. Nên mún dấu gạch cách giữa 2 chữ thì nó bằng -1/2*1.6rem */
+    /* right bởi vì cần đặt dấu bên phải 2 element có chứa class list__item--separate (Vào cửa hàng, đăng ký) */
+     right: -0.8rem; 
+
+    /*--- Cách 2: --*/
+    /* border-left: 0.1rem solid #fb9086;
+    right:-0.9rem;
+    top: 50%;
+    transform: translateY(-50%); */
+}
+.list__item-icon--link{
+    color: var(--white-color);
+    text-decoration: none;
+}
+.navbar__icon{
+    font-size: 1.8rem;
+    margin: 0 0.4rem;
+}
+
+/* HEader QR CODE */
+.list__item--show-qr:hover .navbar__qr-code{
+    display: block ;
+}
+.navbar__qr-code{
+    width: 18.6rem;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+
+    /* --> TẠO SỰ CÂN ĐỐI. Tự điều chỉnh sao cho khoản cách từ "Vào cửa hàng..." đến qr_Code = từ trên header tới "Vào cửa hàng..." */
+    top: 118%;/* Điều chỉnh top bằng % để hạn chế việc khi điều chỉnh kích thước của "Vào cửa hàng..." thì qr_code sẽ không bị dính vào. 
+    Tuy nhiên sẽ xảy ra 1 hiện tượng lỗi. XEM => */
+   
+    padding: 8px;
+    border-radius: 0.2rem;
+    display: none;
+    animation: fadeIn ease-in 0.5s;
+}
+/* => Điều chỉnh TOP thêm thì khi hover từ chữ "Vào cửa hàng..." xuống qr code sẽ có 1 khoản hở. Di chuột qua vùng đó sẽ ẩn lun qr_code. 
+     Nên cách giải quyết như sau: */
+
+/****** TẠO BLOCK CHE KHOẢN HỞ TỪ CHỮ ĐẾN QR_CODE ******/
+.navbar__qr-code::before{
+    position: absolute;
+    content: "";
+    /* Cho độ dài block bằng chính thẻ qr_code */
+    width: 100%;
+    height: 25px;
+    /* background-color:violet; */
+    /*** ---> Che khoản hở từ chữ đến qr_code <---- ***/
+    top: -1rem;
+    left: 0;
+    display: block;
+}
+.item_qr-code{
+    width: 100%;
+}
+.item__app{
+    display: flex;
+    justify-content: space-between;
+}
+.item__img--dowload{
+    height: 15px;
+}
+ .item__img-gg{
+    margin-left:11px;
+ }
+ .item__img-aaps{
+    margin-right:11px;
+ }
+
+/* List Notify  */
+.list__item-notify{
+    position: absolute;
+    width: 40.4rem;
+    top: 118%;
+    right: 0;
+    background-color:var(--white-color);
+    border: 0.1rem solid #d3d3d3 ;
+}
+.notify__header{
+    height: 4.0rem;
+    background-color: var(--white-color);
+
+}
+.notify__header h3{
+    color: rgb(153 153 153);
+    margin: 0 0 0 1.2rem;
+    line-height: 4.0rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    user-select: none;
+}
+.notify__list{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.notify__item{
+
+}
+.notify__item:hover{
+    background-color: #6a68680d;
+}
+.notify__item--viewed{
+    background-color: rgb(238, 77, 43,0.1);
+}
+.notify__item--link{
+    display: flex;
+    /* width: 100%; */
+    Padding:1.2rem;
+    text-decoration:none;
+ 
+}
+
+.notify__img{
+    width: 48px;
+    object-fit: contain; 
+    /* Object-fit: thuộc tính căn chỉnh thay đổi kích thước của ảnh vừa với khoảng trống chứa nó */
+}
+
+.notify__info{
+    margin-left: 12Px;
+}
+
+.notify__name{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.notify__description{
+    display: block;
+    font-size: 1.2rem;
+    color: rgb(117 111 110);
+    margin-top: 0.4rem;
+  
+}
+.notify__footer{
+    text-align: center;
+    padding: 0.8rem 0;
+}
+.notify__footer-btn{
+    text-decoration: none;
+    color: var(--text-color);
+}
