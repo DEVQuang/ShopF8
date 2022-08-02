@@ -126,7 +126,7 @@
     margin-right:11px;
  }
 
-/* List Notify  */
+/* List Notify - Animation Notify  */
 .item-link--notify:hover .list__item-notify{
     display: block;
 }
@@ -137,7 +137,7 @@
     right: 0;
     background-color:var(--white-color);
     border: 0.1rem solid #d3d3d3 ;
-    transform-origin: calc(100% - 2rem) top;
+    transform-origin: calc(100% - 2rem) top;  /* Tạo di chuyển từ góc trên xuống dưới */
     animation: notify ease-in 0.25s;
     will-change: opacity transform;  /* Tối ưu hóa chuyển động */
     display: none;
