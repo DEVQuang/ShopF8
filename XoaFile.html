@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            background-color: darksalmon;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .delete{
+            border: 1px solid darkslategrey;
+            width: 400px;
+            position: absolute;
+            top: 50%;
+            left:  50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            color: forestgreen;
+        }
+        h2 {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+        <div class="delete">
+            <h1>Xóa File Này ĐI</h1>
+            
+            <p >Ngày mai xóa  file này rổi push lên lại git </p>
+            <p>Nhớ là push bằng branch này rồi sang branch main để đồng nhất</p>
+            <ul class="center">
+                <h2>Branch NgayMoi</h2>
+                <p>Sau khi xóa file thì chuyển sang branch main</p>
+                <li>git status : kiểm tra tình trạng </li>
+                <li>git add . : cập nhật</li>
+                <li>git commit: viết lời nhắn</li>
+                <li>git push: đẩy lên github</li>
+            
+        
+                <h2>Branch main</h2>
+                <li>git status : kiểm tra tình trạng </li>
+                <li>git merge : đồng bộ branch ngaymoi lên main </li>
+                <li>git push: đẩy lên github</li>
+                <li>git branch -D Ngaymoi: xóa branch Ngaymoi trên local</li>
+                <li>git push origin --delete Ngaymoi: xóa branch Ngaymoi trên Github</li>
+            </ul>
+        </div>
+</body>
+</html>
