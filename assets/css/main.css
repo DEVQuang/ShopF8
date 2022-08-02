@@ -127,6 +127,9 @@
  }
 
 /* List Notify  */
+.item-link--notify:hover .list__item-notify{
+    display: block;
+}
 .list__item-notify{
     position: absolute;
     width: 40.4rem;
@@ -134,10 +137,48 @@
     right: 0;
     background-color:var(--white-color);
     border: 0.1rem solid #d3d3d3 ;
+    transform-origin: calc(100% - 2rem) top;
+    animation: notify ease-in 0.25s;
+    will-change: opacity transform;  /* Tối ưu hóa chuyển động */
+    display: none;
+
+}
+/* Làm mũi tên lên trên cho notify */
+.list__item-notify::before{
+    content: "";
+    border-width: 2rem 2.7rem;
+    border-style: solid;
+    /* Chỉnh màu cho border transparent (trong suốt ) trên phải trái. Chỉ phía dưới có màu */
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 1rem;
+    top: -2.8rem;
+}
+/* Làm cầu nối cho chữ thông báo đến notify */
+.list__item-notify::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9.4rem;
+    height: 1.8rem;
+    top: -1.5rem;
+    right: 0;
+    /* background-color: violet; */
+}
+@keyframes notify{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 .notify__header{
     height: 4.0rem;
     background-color: var(--white-color);
+    cursor: default;
 
 }
 .notify__header h3{
@@ -147,15 +188,14 @@
     font-size: 1.4rem;
     font-weight: 400;
     user-select: none;
+
 }
 .notify__list{
     list-style-type: none;
     padding-left: 0;
 }
 
-.notify__item{
 
-}
 .notify__item:hover{
     background-color: #6a68680d;
 }
@@ -194,11 +234,19 @@
     margin-top: 0.4rem;
   
 }
-.notify__footer{
-    text-align: center;
-    padding: 0.8rem 0;
-}
+/* .notify__footer{
+    display: flex;
+} */
 .notify__footer-btn{
     text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 400;
     color: var(--text-color);
+    display: block;
+    text-align: center;
+    padding: 0.8rem 4.8rem;
 }
+/* Căn giữa Xem tất cả
+    C1: .notify__footer: display:flex
+    C2 .notify__footer-btn: display: block; text-align:center
+*/
