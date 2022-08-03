@@ -182,7 +182,8 @@
 
 }
 .notify__header h3{
-    color: rgb(153 153 153);
+    /* color: rgb(153 153 153); */
+    color: darkgoldenrod;
     margin: 0 0 0 1.2rem;
     line-height: 4.0rem;
     font-size: 1.4rem;
