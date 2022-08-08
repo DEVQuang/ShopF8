@@ -251,3 +251,85 @@
     C1: .notify__footer: display:flex
     C2 .notify__footer-btn: display: block; text-align:center
 */
+/* Authen Modal */
+
+.auth-form__container{
+    padding: 0 3.2rem;
+}
+.auth-form{
+    overflow: hidden;
+    width: 500px;
+    background-color: var(--white-color);
+    border-radius: 0.5rem;
+}
+.auth__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.auth__heading{
+    
+}
+.auth__switch-btn{
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    cursor: pointer;
+
+}
+
+.auth-form__group input{
+    width: 100%;
+    height: 4.0rem;
+    margin-top: 1.6rem;
+    padding: 0 1.2rem ;
+    font-size: 1.4rem;
+    border: 0.1rem solid var(--border-color);
+    border-radius: 0.3rem;
+    outline: none;
+}
+.auth-form__group input:focus{
+    border-color: #888 ;
+}
+.auth-form__aside{
+    margin-top: 1.8rem;
+}
+.auth-form__policy-text{
+    font-size: 1.2rem;
+    line-height: 2.0rem;
+    text-align: center;
+    padding: 0 1.2rem;
+}
+.auth-form__policy-link{
+    color: var(--primary-color);
+    text-decoration: none;
+
+}
+.auth-form__control{
+    margin-top: 8.0rem;
+    display: flex;
+    justify-content: flex-end ;
+}
+.margin-right{
+  margin-right: 0.8rem;
+}
+.auth-form__socials{
+    background-color: #f5f5f5;
+    padding: 1.4rem 6.0rem;
+    margin-top: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.auth-form__socials-title{
+    margin: 0 2.4rem;
+}
+.socials__icon{
+    font-size: 2.0rem;
+}
+.socials__icon--fb{
+    color: var(--white-color);
+    background-color: #3a5a98;
+}
+
