@@ -1,0 +1,9 @@
+Web Demo: https://f8ubuntu.online/
+    -- Clip 147. Fix Ui bugs
+    1. Navbar font-size: --> 
+    2. Navbar social-icons: 
+    3. Navbar bell-icon:
+    4. Notification arrow-top offset + z-index+ border-radius
+    6. Navbar margin between avatar & name
+    7. Logo link
+    8. Search selection offset-top
