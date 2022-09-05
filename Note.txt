@@ -1,9 +1,9 @@
 Web Demo: https://f8ubuntu.online/
     -- Clip 147. Fix Ui bugs
-    1. Navbar font-size: --> 
-    2. Navbar social-icons: 
-    3. Navbar bell-icon:
-    4. Notification arrow-top offset + z-index+ border-radius
-    6. Navbar margin between avatar & name
-    7. Logo link
-    8. Search selection offset-top
+    1. Navbar font-size: --> 1.3rem OK
+    2. Navbar social-icons: --> icon facebook margin-left 3px OK
+    3. Navbar bell-icon: --> <i class="navbar__icon fa-brands fa-instagram"></i> OK   
+    4. Notification arrow-top offset + z-index+ border-radius: -->.list__item-notify {transform-origin: calc(100% - 3.2rem) top, z-index:1,  border-radius: 2px;} OK  
+    6. Navbar margin between avatar & name: -->  OK
+    7. Logo link: -->  OK 
+    8. Search selection offset-top: -->.header__search-option{ top: calc(100% - 7px) } OK

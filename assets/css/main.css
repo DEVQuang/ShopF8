@@ -34,10 +34,13 @@
 }
 .list__item,
 .list__item-link{
- font-size: 1.5rem;
+ font-size: 1.3rem;
  color: var(--white-color);
  text-decoration: none;
  font-weight: 300;
+}
+.list__item-link i{
+    margin-right: 3px;
 }
 .list__item,
 .list__item-link,
@@ -69,6 +72,10 @@
     color: var(--white-color);
     text-decoration: none;
 }
+.list__item-icon--link:nth-child(2){
+    margin-left: 3px;
+}
+
 .navbar__icon{
     font-size: 1.8rem;
     margin: 0 0.4rem;
@@ -87,13 +94,16 @@
     border-radius: 50%;
 }
 .user_name{
-    margin-left: 8px;
+    margin-left: 3px;
     font-size: 1.4rem;
     color: var(--white-color);
     font-weight: 400;
+
 }
 .user_name:hover{
-    color: rgba(225,225,225,0.7);
+    
+    color: rgba(225,225,225,0.5);
+
 }
 .list__item-user-menu{
     position: absolute;
@@ -125,7 +135,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 12px;
+    height: 8px;
     /* background-color: #3a5a98; */
     top: -7%;
 }
@@ -204,13 +214,15 @@
     display: block;
 }
 .list__item-notify{
+    z-index: 1;
     position: absolute;
     width: 40.4rem;
     top: 118%;
     right: 0;
     background-color:var(--white-color);
-    border: 0.1rem solid #d3d3d3 ;
-    transform-origin: calc(100% - 2rem) top;  /* Tạo di chuyển từ góc trên xuống dưới */
+    border: 0.1rem solid rgba(0, 0, 0,0.1) ;
+    border-radius: 2px;
+    transform-origin: calc(100% - 3.2rem) top;  /* Tạo di chuyển từ góc trên xuống dưới */
     animation: notify ease-in 0.25s;
     will-change: opacity transform;  /* Tối ưu hóa chuyển động */
     display: none;
@@ -435,6 +447,10 @@
 }
 .header__logo{
     width: 200px;
+}
+.header__logo-link{
+    text-decoration: none;
+    color: transparent;
 }
 .header__logo-img{
     width: 150Px;
@@ -703,7 +719,7 @@
 .header__search-option{
     position: absolute;
     right: 0;
-    top: 100%;
+    top: calc(100% - 7px);
     width: 120Px;
     list-style-type: none;
     box-shadow: 0 1px 2px #ccc ;
