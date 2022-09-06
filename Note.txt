@@ -7,3 +7,6 @@ Web Demo: https://f8ubuntu.online/
     6. Navbar margin between avatar & name: -->  OK
     7. Logo link: -->  OK 
     8. Search selection offset-top: -->.header__search-option{ top: calc(100% - 7px) } OK
+
+    -- Clip 148. Danh mục: Dựng khung
+        * Content được chia thành 12 column grid (google ảnh).  kích thước 1 CỘT= màn hình 100% / 12 cột = 8.3% => 2 cột = 16.6%

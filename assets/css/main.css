@@ -766,3 +766,37 @@
 .header__search-option-item--active i{
     display: inline-block;
 }
+ 
+/* APP Container */
+.app__container{
+    background-color: #f5f5f5;
+}
+.category{
+    background-color: var(--white-color);
+    border-radius: 2px;
+}
+.category__heaing{
+    color: var(--text-color);
+    font-size: 1.7rem;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #cccccc81;
+}   
+.category__heaing-icon{
+    font-size: 1.4rem;
+    margin-right: 4px;
+}
+.category__list{
+    padding: 0;
+    list-style-type: none;
+}
+.category-item--active{
+
+}
+.category-item__link{
+    padding: 8px 16px;
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+}
