@@ -181,7 +181,7 @@
                         <i class="cart-icon fa-solid fa-cart-shopping"></i>
                         <span class="header__cart-notice">3</span>
                         <!-- No cart: add class header__cart-list--no-item -->
-                        <div class="header__cart-list  ">
+                        <div class="header__cart-list add class header__cart-list--no-item">
                             <img  class="header__cart-list-img" src="assets/img/empty-cart.png" alt="">
                             <span class="header__cart-list--no-item-mgs">Chưa có sản phẩm</span>
                         </div>
@@ -196,7 +196,7 @@
     <!-- Container -->
     <div class="app__container">
         <div class="grid">
-            <div class="grid__row">
+            <div class="grid__row app__content">
                 <div class="grid__column-2">
                     <nav class="category">
                         <h3 class="category__heaing"> <i class="fa-solid fa-list category__heaing-icon"></i> Danh mục </h3>
@@ -214,7 +214,34 @@
                     </nav>
                 </div>
 
-                <div class="grid__column-10"></div>
+                <div class="grid__column-10">
+                     <div class="home-filter">
+                        <span class="home-filter__label">Sắp xếp theo</span>
+                        <button class="home-filter__btn btn btn--homefilter">Phổ biến</button>
+                        <button class="home-filter__btn btn btn--primary">Mới nhất</button>
+                        <button class="home-filter__btn btn btn--homefilter">Bán chạy</button>
+                       
+                        <div class="select-input">
+                            <span class="select-input__lable">Giá</span>
+                            <i class="select-input__icon fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="home-filter__page">
+                            <span class="home-filter__page-num">
+                                <span class="home-filter__page-current">1</span>
+                                /14
+                            </span>
+                            
+                            <div class="home-filter__page-control">
+                                <a href="" class="home-filter__page-btn">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </a>
+                                <a href="" class="home-filter__page-btn">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                     </div>
+                </div>
             </div>
         </div>
     </div>

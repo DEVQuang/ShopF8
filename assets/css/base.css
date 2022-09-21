@@ -33,15 +33,17 @@ html{
     margin-left: -12px;
     margin-right: -12px;
 }
-/* Test */
+/* Chia thành 12 cột */
 .grid__column-2{
     padding-left: 12px;
     padding-right: 12px;
+    /* Lấy độ dài màn hình 100%/12 cột * 2 (số lượng cột cần dùng) */
     width: 16.6667%;
 }
 .grid__column-10{
     padding-left: 12px;
     padding-right: 12px;
+     /* Lấy độ dài màn hình 100%/12 cột * 10 (số lượng cột cần dùng) */
     width: 83.3334%;
 }
 /* Animation */
@@ -96,10 +98,11 @@ html{
     background-color: var(--white-color);
     color: var(--text-colort-color);
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    border-radius: 2Px;
 }
 .btn.btn--normal:hover{
     background-color: rgba(0,0,0, 0.05);
@@ -107,9 +110,9 @@ html{
 .btn.btn--primary{
     background-color: var(--primary-color);
     border-radius: 2px;
-    color: var(--white-color);
-    
+    color: var(--white-color);   
 }
+
 .btn.btn--size-s{
     /* width: 19.2rem; */
     height: 3.2rem;
